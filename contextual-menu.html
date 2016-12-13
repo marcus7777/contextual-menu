@@ -1,0 +1,46 @@
+<link rel="import" href="../iron-icon/iron-icon.html">
+<link rel="import" href="../iron-dropdown/iron-dropdown.html">
+<link rel="import" href="../icon-icons/iron-icons.html">
+<!--
+  `<contextual-menu></contextual-menu>` Contextual menu 
+  @demo demo.html
+-->
+<dom-module id="contextual-menu">
+  <template>
+    <style>
+      :host {color:#ddd;display:inline-block;text-align:right}
+      :host iron-icon {display:none}
+      :host :hover iron-icon {
+        display:inline-block;
+        color:#666;
+        position:absolute;
+      }
+      .dropdown-content {
+        display:inline-block;
+        background-color:#fff;
+        color:#333;
+        padding:10px;
+        width:100%;
+      }
+    </style>
+    <div>
+      <iron-icon on-tap="open" icon="more-vert" class="dropdown-trigger"></iron-icon>
+      <iron-dropdown id="dropdown" horizontal-align="right">
+        <div class="dropdown-content">
+          <content select=".menu"></content>
+        </div>
+      </iron-dropdown>
+      <span style="text-align: left">
+        <content></content>
+      </span>
+    </div>
+  </template>
+</dom-module>
+<script>
+  Polymer({
+    is: "contextual-menu",
+    open: function(undefined){
+      this.$.dropdown.open(); 
+    },
+  })
+</script>

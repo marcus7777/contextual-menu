@@ -1,0 +1,15 @@
+{
+  "name": "contextual-menu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "contextual-menu.html",
+  "keywords": [
+    "polymer",
+    "web-components"
+  ],
+  "dependencies": {
+    "icon-icons": "*",
+    "iron-dropdown": "*",
+    "iron-icon": "PolymerElements/iron-icon#e77365a99a"
+  }
+}
