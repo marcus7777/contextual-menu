@@ -27,11 +27,11 @@
       <iron-icon on-tap="open" icon="more-vert" class="dropdown-trigger"></iron-icon>
       <iron-dropdown id="dropdown" horizontal-align="right">
         <div class="dropdown-content">
-          <content select=".menu"></content>
+          <slot name="menu"></slot>
         </div>
       </iron-dropdown>
       <span style="text-align: left">
-        <content></content>
+        <slot></slot>
       </span>
     </div>
   </template>
@@ -39,7 +39,7 @@
 <script>
   Polymer({
     is: "contextual-menu",
-    open: function(undefined){
+    open: function(){
       this.$.dropdown.open(); 
     },
   })
