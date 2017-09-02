@@ -24,7 +24,6 @@
       }
     </style>
     <div>
-      <iron-icon on-tap="open" icon="more-vert" class="dropdown-trigger"></iron-icon>
       <iron-dropdown id="dropdown" horizontal-align="right">
         <div class="dropdown-content">
           <slot name="menu"></slot>
@@ -33,6 +32,7 @@
       <span style="text-align: left">
         <slot></slot>
       </span>
+      <iron-icon on-tap="open" icon="more-vert" class="dropdown-trigger"></iron-icon>
     </div>
   </template>
 </dom-module>
